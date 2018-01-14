@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PorfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlT-6b-H2H">
+                                <rect key="frame" x="0.0" y="274" width="414" height="462"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="1yE-AV-fvA">
+                                        <rect key="frame" x="182" y="-12" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ehw-3R-0ad"/>
+                                            <constraint firstAttribute="height" constant="50" id="udG-DU-vNY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1yE-AV-fvA" firstAttribute="top" secondItem="KlT-6b-H2H" secondAttribute="top" constant="-12" id="Wb5-he-Imh"/>
+                                    <constraint firstItem="1yE-AV-fvA" firstAttribute="centerX" secondItem="KlT-6b-H2H" secondAttribute="centerX" id="fLX-8K-hSw"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="O1r-cv-5R0">
+                                <rect key="frame" x="132" y="40" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Wx8-gN-xiG"/>
+                                    <constraint firstAttribute="width" constant="150" id="b3P-83-ZFj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Torres" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-PA-3L1">
+                                <rect key="frame" x="140" y="209" width="134" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KlT-6b-H2H" secondAttribute="trailing" id="CXn-Sl-iLf"/>
+                            <constraint firstItem="O1r-cv-5R0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DmA-rl-6Mi"/>
+                            <constraint firstItem="KlT-6b-H2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WFk-NK-PHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KlT-6b-H2H" secondAttribute="bottom" id="gPf-0D-q3W"/>
+                            <constraint firstItem="aUc-PA-3L1" firstAttribute="top" secondItem="O1r-cv-5R0" secondAttribute="bottom" constant="19" id="iqK-ER-fqv"/>
+                            <constraint firstItem="O1r-cv-5R0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pov-Rw-DfE"/>
+                            <constraint firstItem="KlT-6b-H2H" firstAttribute="top" secondItem="aUc-PA-3L1" secondAttribute="bottom" constant="40" id="qIe-x2-cxJ"/>
+                            <constraint firstItem="KlT-6b-H2H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s8p-P3-SIV"/>
+                            <constraint firstItem="aUc-PA-3L1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="spL-L4-df2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomView" destination="KlT-6b-H2H" id="uXZ-1M-t5k"/>
+                        <outlet property="linkedInImageView" destination="1yE-AV-fvA" id="hle-4V-k9K"/>
+                        <outlet property="profileImageView" destination="O1r-cv-5R0" id="VDl-91-Iln"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.06521739130434"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="linkedin" width="256" height="256"/>
+        <image name="profilePic" width="1464" height="1464"/>
+    </resources>
 </document>
